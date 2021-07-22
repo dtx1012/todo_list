@@ -15,7 +15,6 @@
         title: ""
       }
     },
-    props: ['addTodo'],
     methods: {
       add() {
         //校验数据
@@ -27,7 +26,7 @@
           done: false
         }
         //通知App组件去添加一个todo对象
-        this.addTodo(todoObj)
+        this.$emit('addTodo', todoObj)
         //清空输入
         this.title = ''
       }

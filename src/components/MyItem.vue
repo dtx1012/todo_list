@@ -1,4 +1,5 @@
 <template>
+  <!-- <transition name="todo" appear> -->
   <li>
     <label>
       <input type="checkbox" :checked="todo.done" @change="handleCheck(todo.id)" />
@@ -9,8 +10,8 @@
     </label>
     <button class="btn btn-danger" @click="handleDelete(todo.id)">删除</button>
     <button v-show="!todo.isEdit" class="btn btn-edit" @click="handleEdit(todo)">编辑</button>
-
   </li>
+  <!-- </transition> -->
 </template>
 
 <script>
@@ -103,4 +104,23 @@
   li:hover button {
     display: block;
   }
+
+  /* 动画 */
+  /* .todo-enter-active {
+    animation: atguigu 0.5s linear;
+  }
+
+  .todo-leave-active {
+    animation: atguigu 0.5s linear reverse;
+  }
+
+  @keyframes atguigu {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0px);
+    }
+  } */
 </style>
